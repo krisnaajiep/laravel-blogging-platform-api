@@ -16,6 +16,10 @@ class PostController extends Controller
     public function index(): JsonResponse
     {
         $posts = Post::search(request()->get('term'))->latest()->get();
+        $posts->map(function (Post $post) {
+            $post->tags = json_decode($post->tags);
+            return $post;
+        });
 
         return response()->json($posts);
     }
@@ -50,6 +54,8 @@ class PostController extends Controller
      */
     public function show(Post $post): JsonResponse
     {
+        $post->tags = json_decode($post->tags);
+
         return response()->json($post);
     }
 
