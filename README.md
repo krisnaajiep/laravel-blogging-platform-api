@@ -9,7 +9,7 @@ To start using the Expense Tracker API, you need to -
 1. Clone the repository.
 
     ```bash
-    git clone https://github.com/krisnaajiep/blogging-platform-api.git
+    git clone https://github.com/krisnaajiep/laravel-blogging-platform-api.git
 
     ```
 
@@ -41,14 +41,14 @@ To start using the Expense Tracker API, you need to -
 
     ```
 
-6. Run the local server.
+6. Run the local web server.
 
     ```bash
     php artisan serve
 
     ```
 
-7. Run the API using base URL. `http://localhost:8000`
+7. Access the endpoints with the base URL. `http://localhost:8000`
 
 ## HTTP Response Code
 
